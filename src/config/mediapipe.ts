@@ -11,7 +11,7 @@ export interface MediaPipeAssetPaths {
   modelUrl: string;
 }
 
-const WASM_DEV_BASE_URL = "/vendor/mediapipe";
+const WASM_DEV_BASE_URL = `${import.meta.env.BASE_URL}vendor/mediapipe`;
 const MODEL_FULL = `${WASM_DEV_BASE_URL}/face_landmarker.task`;
 const MODEL_LITE = `${WASM_DEV_BASE_URL}/face_landmarker_lite.task`;
 
