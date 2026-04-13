@@ -11,10 +11,16 @@ import { randomUUID } from "crypto";
 const UPLOAD_DIR = resolve(process.cwd(), "tmp/uploads");
 mkdirSync(UPLOAD_DIR, { recursive: true });
 
-const upload = multer({ storage: multer.memoryStorage() });
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 2 * 1024 * 1024, files: 1, fields: 4 },
+  fileFilter: (_req, file, cb) => {
+    cb(null, file.mimetype === "image/jpeg");
+  },
+});
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: ["http://localhost:5173", "https://localhost:5173"] }));
 
 app.get("/health", (_req: Request, res: Response) => {
   res.json({ ok: true, service: "mw-camera-mock", now: new Date().toISOString() });
@@ -23,7 +29,7 @@ app.get("/health", (_req: Request, res: Response) => {
 // Serve the uploaded JPEG back so the client can display what it sent.
 app.get("/api/face-capture/:id", (req: Request, res: Response) => {
   const id = req.params.id;
-  if (!/^[0-9a-f-]{36}$/.test(id)) {
+  if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(id)) {
     res.status(400).json({ ok: false, error: "bad id" });
     return;
   }

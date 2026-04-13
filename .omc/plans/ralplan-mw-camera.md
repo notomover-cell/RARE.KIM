@@ -34,9 +34,9 @@
 - **Risks updated**: Risk #5 removed; Risk #1 now references Performance Budget as quantitative proof (not splash perception).
 - **ADR updated**: New entry documenting iter2 fixes and Consequences addendum.
 - Sources of truth:
-  - Spec: `/Users/woochang/projects/MW_CAMERA/.omc/specs/deep-interview-mw-camera.md`
-  - Reference analysis: `/Users/woochang/projects/MW_CAMERA/reference/existing-id-capture/ANALYSIS.md`
-  - Raw reference assets: `/Users/woochang/projects/MW_CAMERA/reference/existing-id-capture/extracted/`
+  - Spec: `./.omc/specs/deep-interview-mw-camera.md`
+  - Reference analysis: `./reference/existing-id-capture/ANALYSIS.md`
+  - Raw reference assets: `./reference/existing-id-capture/extracted/`
 
 ### Iteration 3 → What changed (post-Critic ITERATE)
 Architect APPROVED iter2; Critic returned ITERATE with 3 Required fixes and 5 Recommended. All Required fixes are addressed; most Recommended items are folded in where trivially cheap. Locked decisions unchanged.
@@ -102,7 +102,7 @@ Architect APPROVED iter2; Critic returned ITERATE with 3 Required fixes and 5 Re
 
 ### Repository layout (tree)
 ```
-/Users/woochang/projects/MW_CAMERA/
+./
 ├── package.json
 ├── tsconfig.json
 ├── tsconfig.node.json

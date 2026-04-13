@@ -220,7 +220,11 @@ overlay.appendChild(diagBadge);
 // Helpers
 // ============================================================
 function showStatus(msg: string, color = "rgb(255,242,95)"): void {
-  helpTextEl.innerHTML = `<b style="color:${color}">${msg}</b>`;
+  const b = document.createElement("b");
+  b.style.color = color;
+  b.textContent = msg;
+  helpTextEl.textContent = "";
+  helpTextEl.appendChild(b);
   // eslint-disable-next-line no-console
   console.log("[MW-CAMERA]", msg);
 }
@@ -638,5 +642,13 @@ async function handleBlinkConfirmed(centerTs: number): Promise<void> {
     showStatus(`에러: ${msg}`, "#ff6b6b");
   }
 }
+
+// Security: release camera + GPU textures on page unload (PIPA §29)
+function cleanup(): void {
+  videoPipeline?.stop();
+  ringBuffer?.clear();
+}
+window.addEventListener("pagehide", cleanup, { capture: true });
+window.addEventListener("beforeunload", cleanup);
 
 void startSession();
