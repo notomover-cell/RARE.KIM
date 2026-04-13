@@ -606,36 +606,49 @@ async function handleBlinkConfirmed(centerTs: number): Promise<void> {
 
     showStatus("업로드 중...", "rgb(180,255,180)");
     const jpeg = await encodeJpeg(best.frame, JPEG_QUALITY_DEFAULT);
-    const result = await uploader.upload(jpeg, {
-      capturedAt: centerTs,
-      sessionMs: performance.now() - startedAt,
-      score: {
-        sharpness: best.sharpness,
-        reflectionFree: best.reflectionFree,
-        alignment: best.alignment,
-        total: best.total,
-      },
-    });
 
-    if (!result.ok) {
-      fsm.uploadFailed();
-      showStatus(`업로드 실패: ${result.error}`, "#ff6b6b");
-      return;
-    }
-    fsm.uploadSucceeded();
-    showStatus("완료", "rgb(180,255,180)");
-    drawGuide("confirmed");
-
-    // Visual verification: fetch back the uploaded JPEG from the server
-    // and render it as a thumbnail. If the image appears, the round-trip
-    // (client → multipart upload → server disk → GET /api/face-capture/:id)
-    // is proven.
-    if (result.id) {
-      resultImg.src = `/api/face-capture/${result.id}?t=${Date.now()}`;
-      resultImg.style.transform = "scaleX(-1)"; // undo the mirror so it reads naturally
+    // Demo mode: if no backend server (e.g. GitHub Pages), skip upload
+    // and show the captured image locally via Object URL.
+    const isStaticHost = location.protocol === "https:" && !location.hostname.includes("localhost");
+    if (isStaticHost) {
+      fsm.markCaptured(centerTs);
+      fsm.beginUpload();
+      fsm.uploadSucceeded();
+      showStatus("촬영 완료 (데모 모드)", "rgb(180,255,180)");
+      drawGuide("confirmed");
+      resultImg.src = URL.createObjectURL(jpeg);
+      resultImg.style.transform = "scaleX(-1)";
       const sizeKb = Math.round(jpeg.size / 1024);
-      resultCaption.textContent = `서버 저장 ✓ ${sizeKb}KB`;
+      resultCaption.textContent = `촬영 완료 ✓ ${sizeKb}KB (로컬)`;
       resultBox.style.display = "block";
+    } else {
+      const result = await uploader.upload(jpeg, {
+        capturedAt: centerTs,
+        sessionMs: performance.now() - startedAt,
+        score: {
+          sharpness: best.sharpness,
+          reflectionFree: best.reflectionFree,
+          alignment: best.alignment,
+          total: best.total,
+        },
+      });
+
+      if (!result.ok) {
+        fsm.uploadFailed();
+        showStatus(`업로드 실패: ${result.error}`, "#ff6b6b");
+        return;
+      }
+      fsm.uploadSucceeded();
+      showStatus("완료", "rgb(180,255,180)");
+      drawGuide("confirmed");
+
+      if (result.id) {
+        resultImg.src = `/api/face-capture/${result.id}?t=${Date.now()}`;
+        resultImg.style.transform = "scaleX(-1)";
+        const sizeKb = Math.round(jpeg.size / 1024);
+        resultCaption.textContent = `서버 저장 ✓ ${sizeKb}KB`;
+        resultBox.style.display = "block";
+      }
     }
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
