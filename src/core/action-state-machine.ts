@@ -79,7 +79,7 @@ const DEFAULT_CONFIG: ActionStateMachineConfig = {
   maxRetries: 3,
   maxBlinkRetriesBeforeFallback: 2,
   faceLostFrameThreshold: 2,
-  alignment: { yawMaxDeg: 12, pitchMaxDeg: 12, rollMaxDeg: 12, minFaceWidthRatio: 0.25 },
+  alignment: { yawMaxDeg: 12, pitchMaxDeg: 12, rollMaxDeg: 12, minFaceWidthRatio: 0.25, maxCenterOffset: 1.0 },
   earBlinkClosedMax: 0.18,
   earBlinkOpenMin: 0.24,
   earWindowMs: 600,

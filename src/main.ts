@@ -546,6 +546,8 @@ function mapStateToHelp(state: string, alignReason?: string): void {
     case "aligning":
       if (alignReason === "face_too_small") {
         showStatus("좀 더 가까이 와주세요");
+      } else if (alignReason === "face_off_center") {
+        showStatus("얼굴을 원 안에 맞춰주세요");
       } else {
         showStatus("얼굴을 화면 안에 맞춰주세요");
       }
