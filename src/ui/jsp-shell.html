@@ -1,0 +1,84 @@
+<%-- ============================================================
+  MWPTBIM60000000.jsp — Mock JSP shell for the BNK face capture POC.
+  Renders the camera DOM under the same class/z-index/header/exit-button
+  conventions as the legacy MWPTBIM50000000 (신분증 안내) page so that
+  styles, focus order and 장차법 markers stay parity-aligned.
+
+  2026-04-11 장차법 준수: aria-label, aria-live, keyboard navigation,
+  자동촬영 불가 사용자 대체 경로 (Phase 8 manual fallback)
+============================================================ --%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>얼굴 촬영 | 비대면실명확인 - BNK 부산은행</title>
+  <link rel="stylesheet" href="/resource/css/mwp/mwp.css" />
+  <link rel="stylesheet" href="/resource/css/mwp/pic-face.css" />
+  <link rel="preload" as="fetch" href="/resource/js/mwp/vendor/mediapipe/face_landmarker.task" crossorigin />
+</head>
+<body>
+  <%-- ===== 공용 BNK 헤더 (mock-header.html parity) ===== --%>
+  <header class="bnk-new-2023" role="banner">
+    <div class="bnk-new-2023__inner">
+      <button type="button" class="bnk-new-2023__back" aria-label="뒤로 가기">뒤로</button>
+      <h1 class="bnk-new-2023__title">얼굴 촬영</h1>
+    </div>
+  </header>
+
+  <%-- ===== 카메라 컨테이너 (legacy DOM 컨벤션 미러) ===== --%>
+  <div class="lybx ctg_cmn pic_face" style="position:absolute; top:0; overflow-y:hidden">
+    <div class="scrollBox">
+
+      <div class="video_wrapper">
+        <video autoplay playsinline muted></video>
+      </div>
+
+      <div class="overlay">
+        <canvas id="overlay_canvas" width="360" height="649" aria-hidden="true"></canvas>
+
+        <%-- 2026-04-11 장차법 준수: aria-live 안내문 (상태 전이 음성 안내) --%>
+        <div id="help_overlay">
+          <span id="help_text" class="guide_text" aria-live="polite" role="status">
+            <b>얼굴을 화면 안에 맞춰주세요</b>
+          </span>
+        </div>
+
+        <div id="button_overlay" class="button_overlay">
+          <%-- iter2: new ID #face_auto_capture (legacy #auto_snap 셀렉터 충돌 회피)
+               class="btn_camera" parity 유지 (.pic_idcard 와 동일 시각 컨벤션) --%>
+          <button type="button"
+                  class="btn_camera"
+                  id="face_auto_capture"
+                  aria-label="얼굴촬영"
+                  autocomplete="off"
+                  autocorrect="off"></button>
+        </div>
+      </div>
+
+      <button type="button"
+              class="btn_exit outside_btn"
+              id="btnClose"
+              aria-label="나가기"
+              autocomplete="off"
+              autocorrect="off">나가기</button>
+
+    </div>
+  </div>
+
+  <%-- ===== getUserMedia 미지원 폴백 컨테이너 (Phase 8 unsupported-container) ===== --%>
+  <div id="unsupported_container" hidden></div>
+
+  <script src="/resource/js/mwp/vendor/mediapipe/vision_wasm_internal.js"></script>
+  <script src="/resource/js/mwp/camera-module.iife.js?v=V20260411000001"></script>
+  <script>
+    // Production entry — wires the JSP DOM into CameraModule + UIController.
+    CameraModule.start({
+      uploadUrl: "/api/face-capture",
+      videoEl: document.querySelector(".video_wrapper > video"),
+      overlayEl: document.getElementById("overlay_canvas")
+    });
+  </script>
+</body>
+</html>

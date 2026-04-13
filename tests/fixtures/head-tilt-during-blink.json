@@ -1,0 +1,18 @@
+{
+  "description": "Face aligns, enters align_hold, transitions to blink_detecting, then head tilt (yaw beyond gate) invalidates the blink window — FSM must return to aligning and clear the EAR buffer (Major #3).",
+  "samples": [
+    { "timestamp": 0,    "headPose": { "yaw": 2,  "pitch": 1,  "roll": 0 }, "ear": 0.30, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 100,  "headPose": { "yaw": 2,  "pitch": 1,  "roll": 0 }, "ear": 0.30, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 300,  "headPose": { "yaw": 2,  "pitch": 1,  "roll": 0 }, "ear": 0.30, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 600,  "headPose": { "yaw": 2,  "pitch": 1,  "roll": 0 }, "ear": 0.30, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 1100, "headPose": { "yaw": 2,  "pitch": 1,  "roll": 0 }, "ear": 0.29, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 1200, "headPose": { "yaw": 3,  "pitch": 1,  "roll": 0 }, "ear": 0.17, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 1260, "headPose": { "yaw": 25, "pitch": 2,  "roll": 3 }, "ear": 0.15, "faceBox": { "x": 0.28, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 1320, "headPose": { "yaw": 28, "pitch": 4,  "roll": 4 }, "ear": 0.14, "faceBox": { "x": 0.30, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true }
+  ],
+  "expectations": {
+    "finalState": "aligning",
+    "stateSequence": ["aligning", "align_hold", "blink_prompt", "blink_detecting", "aligning"],
+    "earBufferClearedAt": 1260
+  }
+}

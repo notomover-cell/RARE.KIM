@@ -1,0 +1,17 @@
+{
+  "description": "Face aligns and enters blink_detecting, then two consecutive frames report null landmarks (face lost). FSM must return to aligning and clear the EAR buffer (Major #3).",
+  "samples": [
+    { "timestamp": 0,    "headPose": { "yaw": 1, "pitch": 0, "roll": 0 }, "ear": 0.30, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 200,  "headPose": { "yaw": 1, "pitch": 0, "roll": 0 }, "ear": 0.30, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 500,  "headPose": { "yaw": 1, "pitch": 0, "roll": 0 }, "ear": 0.30, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 1100, "headPose": { "yaw": 1, "pitch": 0, "roll": 0 }, "ear": 0.29, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 1180, "headPose": { "yaw": 1, "pitch": 0, "roll": 0 }, "ear": 0.17, "faceBox": { "x": 0.25, "y": 0.20, "w": 0.50, "h": 0.55 }, "hasLandmarks": true },
+    { "timestamp": 1240, "headPose": null, "ear": null, "faceBox": null, "hasLandmarks": false },
+    { "timestamp": 1300, "headPose": null, "ear": null, "faceBox": null, "hasLandmarks": false }
+  ],
+  "expectations": {
+    "finalState": "aligning",
+    "stateSequence": ["aligning", "align_hold", "blink_prompt", "blink_detecting", "aligning"],
+    "earBufferClearedAt": 1300
+  }
+}

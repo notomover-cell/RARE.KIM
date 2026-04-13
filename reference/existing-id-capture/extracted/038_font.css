@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@font-face { font-family: noto; src: url("./font/NotoSans-Regular.woff") format("woff"), url("./font/NotoSans-Regular.ttf") format("truetype"); font-weight: 400; }
+
+@font-face { font-family: noto; src: url("./font/NotoSans-Medium.woff") format("woff"), url("./font/NotoSans-Medium.ttf") format("truetype"); font-weight: 600; }
+
+@font-face { font-family: noto; font-style: normal; font-weight: 900; src: url("/resource/font/onb/notokr-bold.woff2") format("woff"); }
+
+@font-face { font-family: notoB; font-style: normal; font-weight: 900; src: url("/resource/font/onb/notokr-bold.woff2") format("woff"); }
+
+@font-face { font-family: num; src: url("./font/NanumSquareB.woff") format("woff"), url("./font/NanumSquareB.ttf") format("truetype"); }
+
+@font-face { font-family: num; font-weight: 800; src: url("./font/NanumSquareEB.woff") format("woff"), url("./font/NanumSquareEB.ttf") format("truetype"); }
+
+@font-face { font-family: GM; font-style: normal; font-weight: 400; src: url("/resource/css/mwp/font/GmarketSansTTFMedium.ttf") format("truetype"); }
+
+@font-face { font-family: GMB; font-style: normal; font-weight: 600; src: url("/resource/css/mwp/font/GmarketSansTTFBold.ttf") format("truetype"); }
+
+@font-face { font-family: scoreDream; font-style: normal; font-weight: 400; src: url("/resource/css/mwp/font/SCDream5.otf") format("woff"); }
+
+@font-face { font-family: scoreDreamB; font-style: normal; font-weight: 600; src: url("/resource/css/mwp/font/S-CoreDream-6Bold.woff") format("woff"); }

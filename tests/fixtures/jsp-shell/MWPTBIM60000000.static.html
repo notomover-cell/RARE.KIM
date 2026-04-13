@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>얼굴 촬영 | 비대면실명확인 - BNK 부산은행</title>
+  <style>
+    .video_wrapper { position: absolute; z-index: 0; }
+    .overlay { position: absolute; z-index: 10; }
+    #help_overlay { position: absolute; z-index: 90; }
+    #button_overlay { position: absolute; z-index: 100; }
+  </style>
+</head>
+<body>
+  <header class="bnk-new-2023" role="banner">
+    <div class="bnk-new-2023__inner">
+      <button type="button" class="bnk-new-2023__back" aria-label="뒤로 가기">뒤로</button>
+      <h1 class="bnk-new-2023__title">얼굴 촬영</h1>
+    </div>
+  </header>
+
+  <div class="lybx ctg_cmn pic_face" style="position:absolute; top:0; overflow-y:hidden">
+    <div class="scrollBox">
+
+      <div class="video_wrapper">
+        <video autoplay playsinline muted></video>
+      </div>
+
+      <div class="overlay">
+        <canvas id="overlay_canvas" width="360" height="649" aria-hidden="true"></canvas>
+
+        <div id="help_overlay">
+          <span id="help_text" class="guide_text" aria-live="polite" role="status">
+            <b>얼굴을 화면 안에 맞춰주세요</b>
+          </span>
+        </div>
+
+        <div id="button_overlay" class="button_overlay">
+          <button type="button"
+                  class="btn_camera"
+                  id="face_auto_capture"
+                  aria-label="얼굴촬영"
+                  autocomplete="off"
+                  autocorrect="off"></button>
+        </div>
+      </div>
+
+      <button type="button"
+              class="btn_exit outside_btn"
+              id="btnClose"
+              aria-label="나가기"
+              autocomplete="off"
+              autocorrect="off">나가기</button>
+
+    </div>
+  </div>
+
+  <div id="unsupported_container" hidden></div>
+</body>
+</html>

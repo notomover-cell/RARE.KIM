@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+.contents_lcb *, .contents_lcb .tbl_info.type_small th, .contents_lcb .tbl_info.type_small td, .contents_lcb .tbl_info.type_xs th, .contents_lcb .tbl_info.type_xs td, .contents_lcb [class^="layer_"] .ly_tit { font-size: 2.1rem; line-height: 2.4rem; }
+
+.contents_lcb .list_account .acc_tit, .contents_lcb .list_account .acc_desc li, .contents_lcb .msg_result .txt_small, .contents_lcb .msg_result .txt_small2, .contents_lcb .msg_result .txt_small3 { font-size: 1.9rem; line-height: 2.2rem; }
+
+.contents_lcb .btn_sel_area li label, .contents_lcb .check_info .btn_del, .contents_lcb .check_info .chk_summ { font-size: 1.6rem; line-height: 2.4rem; }
+
+.contents_lcb .chk_tit, .contents_lcb .chk_tit strong, .contents_lcb .chk_tit em, .contents_lcb .chk_tit span { font-size: 2.4rem; line-height: 2.8rem; }
+
+.contents_lcb .account_area { min-height: 5.5rem; font-size: 150%; }
+
+.contents_lcb .input_wrap .input_tit { color: rgb(0, 0, 0); font-size: 2.25rem; }
+
+.contents_lcb .input_wrap .inp_desc { font-size: 1.95rem; }
+
+.contents_lcb .inp_wrap { min-height: 4.1rem; }
+
+.contents_lcb .inp_wrap:first-child { margin-top: 0px !important; }
+
+.contents_lcb .inp_wrap .btn_inp { height: 4.7rem; font-size: 2.55rem; }
+
+.contents_lcb .inp_area_text .inp_text { padding: 8px 0px; font-size: 2.4rem; }
+
+.contents_lcb .inp_area_text .inp_text::-webkit-input-placeholder { font-size: 2.1rem; }
+
+.contents_lcb .inp_area_text label { font-size: 2.1rem; }
+
+.contents_lcb .inp_area_text.focus label, .contents_lcb .inp_area_text.on label, .contents_lcb .inp_wrap.inp_tit .inp_area_text label { top: -2.3rem; }
+
+.contents_lcb .inp_side .inp_area_text.focus label, .contents_lcb .inp_side .inp_area_text.on label { top: 1.2rem; }
+
+.contents_lcb .inp_wrap:not(.inp_side) .inp_area_text .tit { top: -1.7rem; }
+
+.contents_lcb .inp_wrap .required { top: 0.3rem; }
+
+.contents_lcb .input_wrap.type_sub .inp_area_text label, .contents_lcb .input_wrap.type_sub .inp_wrap .tit { font-size: 2.1rem; }
+
+.contents_lcb .input_wrap.type_sub .inp_etc { min-height: 4.1rem; }
+
+.contents_lcb .inp_area_textarea .inp_textarea { font-size: 2.4rem; }
+
+.contents_lcb .inp_area_textarea .inp_textarea::-webkit-input-placeholder { font-size: 2.1rem; }
+
+.contents_lcb .inp_wrap.inp_tit .inp_area_text.inp_area_textarea label { top: -30px; }
+
+.contents_lcb .inp_unit .unit, .contents_lcb .inp_wrap.inp_unit .inp_area_text .unit { margin-top: -8px; font-size: 2.1rem; }
+
+.contents_lcb .inp_area_text .btn_delete { top: 15px; }
+
+.contents_lcb .inp_area_text.show_btn .inp_text { padding-right: 25px; }
+
+.contents_lcb .inp_wrap .guide_area .info_txt, .contents_lcb .inp_wrap .err_area .err_txt { font-size: 1.7rem; }
+
+.contents_lcb .inp_wrap .btn_request { margin-top: -39px; font-size: 1.7rem; }
+
+.contents_lcb .select_box { min-height: 4.1rem; }
+
+.contents_lcb .inp_wrap:not(.inp_side) .tit + .select_box { margin-top: 1rem; }
+
+.contents_lcb .select_box + .inp_area_text { margin-top: 3rem; }
+
+.contents_lcb .select_box .tit { top: -2.3rem; }
+
+.contents_lcb .select_box .placeholder { height: 2.1rem; font-size: 2.1rem; }
+
+.contents_lcb .select_box .label { height: auto; font-size: 2.4rem; }
+
+.contents_lcb .inp_wrap.inp_side .select_box .tit { top: 12px; }
+
+.contents_lcb .inp_wrap.inp_side .placeholder, .contents_lcb .inp_wrap.inp_side .inp_area_text, .contents_lcb .inp_wrap.inp_side .select_box .tit ~ .label { padding-left: 45%; white-space: normal; }
+
+.contents_lcb .inp_wrap.inp_side .select_box .label { min-height: 49px; }
+
+.contents_lcb .summary_panel .summ_select.type_ac .label { height: auto; }
+
+.contents_lcb .summ_select.type_ac .select_box .tit { font-size: 1.9rem; }
+
+.contents_lcb .summary_panel .summ_select.type_ac .label.type_default .tit, .contents_lcb .summary_panel .summ_select.type_ac .label.type_default .sel { font-size: 2.1rem; }
+
+.contents_lcb .noti_overdue .txt { padding-right: 3.5rem; }
+
+.contents_lcb .inp_wrap.inp_etc { height: 5rem; }
+
+.contents_lcb .inp_wrap.inp_etc .tit { top: 11px; }
+
+.contents_lcb .account_area .select_box .label { height: auto; }
+
+.contents_lcb .account_area .acc_balance .txt_balance { font-size: 1.95rem; }
+
+.contents_lcb .acd_btn.ico_arr::after { border-width: 0.5rem; }
+
+.contents_lcb .calendar { height: 2.6rem; }
+
+.contents_lcb .calendar .date { font-size: 1.7rem; line-height: 1.4; }
+
+.contents_lcb .calendar::after { top: 7px; }
+
+.contents_lcb .date_calendar th { font-size: 1.4rem; }
+
+.contents_lcb .inp_area_cal .calendar { width: 46%; line-height: 1; }
+
+.contents_lcb .inp_area_cal .calendar::after { right: 12px; top: 6px; }
+
+.contents_lcb .layer_trans .my_acc_list .sort_area { margin-left: 0px; margin-right: 0px; }
+
+.contents_lcb .layer_trans .info_box .info_tit .tit { font-size: 2.25rem; }
+
+.contents_lcb .layer_trans .info_box .info_tit .desc { font-size: 2.1rem; }
+
+.contents_lcb .layer_trans .bank_list li { height: 8.5rem; }
+
+.contents_lcb .layer_trans .bank_list .name { font-size: 1.8rem; }
+
+.contents_lcb .layer_trans .bank_list .name .etc { font-size: 1.4rem; }
+
+.contents_lcb .ly_tit.chk_tit, .contents_lcb .ly_tit.chk_tit strong, .contents_lcb .ly_tit.chk_tit span, .contents_lcb .ly_tit.chk_tit em { font-size: 3.1rem; }
+
+.contents_lcb .list_txt li .txt, .contents_lcb .list_txt li .txt span, .contents_lcb .d_debit_area .box_wrap .list_txt li .txt { font-size: 2.25rem; line-height: 1.5; }
+
+.contents_lcb .list_txt li .txt.memo input { display: inline-block; width: 70%; }
+
+.contents_lcb .msg_result .txt_big, .contents_lcb .msg_result .txt_big strong, .contents_lcb .msg_result .txt_big em, .contents_lcb .msg_result .txt_big span { font-size: 3.15rem; }
+
+.contents_lcb .msg_result .txt, .contents_lcb .msg_result .txt strong { font-size: 2.55rem; }
+
+.contents_lcb .msg_wrap .txt_small3 { font-size: 2.1rem; }
+
+.contents_lcb .check_info.simple_acco button.label { font-size: 2.25rem; }
+
+.contents_lcb .imn_list_area .tit_area { margin-top: 15px; }
+
+.contents_lcb .imn_list_wrap::before { height: 8.5rem; }
+
+.contents_lcb .imn_list_area .imn_list .acc_panel .acc_info_wrap { min-height: 12.6rem; }
+
+.contents_lcb .imn_list_area .tit_area .price, .contents_lcb .imn_list_area .tit_area .price em, .contents_lcb .imn_list_area .imn_list .acc_panel .select_box .label .tit, .contents_lcb .imn_list_area .imn_list .acc_panel .select_box .label .acc_num { font-size: 2.25rem; }
+
+.contents_lcb .imn_list_area .imn_list .acc_panel .select_box .label { height: auto; }
+
+.contents_lcb .imn_list_area .imn_list .acc_panel .select_box .label .acc_num { margin-bottom: -5px; }
+
+.contents_lcb .imn_list_area .imn_list .acc_panel.type_s { height: 13.9rem; }
+
+.contents_lcb .imn_list_area .imn_list .acc_panel .balance { margin-bottom: 2rem; font-size: 2.25rem; }
+
+.contents_lcb .imn_list_area .imn_list .acc_panel .balance .txt_num { font-size: 3.6rem; }
+
+.contents_lcb .imn_list_area .imn_list .acc_panel .desc { font-size: 1.95rem; }
+
+.contents_lcb .imn_list_area .imn_list .acc_panel .btns { height: 5rem; }
+
+.contents_lcb .imn_list_area .imn_list .acc_panel .desc_info { font-size: 1.95rem; }
+
+.contents_lcb .imn_list_area .imn_list .acc_panel .acc_info { margin-top: 0px; }
+
+.contents_lcb .btn_basic { height: 5rem; }
+
+.contents_lcb .trans_list .primary { font-size: 2.25rem; }
+
+.contents_lcb .trans_list[class*="type_opn"] .trans .left { padding-left: 5.8rem; }
+
+.contents_lcb .trans_list .trans .left span { display: -webkit-box; overflow: hidden; font-size: 2.1rem; line-height: 3rem; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+
+.contents_lcb .trans_list .trans .left span + strong { font-size: 2.1rem; line-height: 3rem; }
+
+.contents_lcb .trans_list .trans .right strong { font-size: 2.1rem; line-height: 3rem; }
+
+.contents_lcb .sort_details_wrap { min-height: 76px; }
+
+.contents_lcb .util_btns button { font-size: 1.8rem; }
+
+.contents_lcb .layer_all .amount_wrap > dl dd > span { font-size: 1.8rem; }
+
+.contents_lcb .acc_manage .manage_tit { width: 70%; }
+
+.contents_lcb .acc_manage .col_rt { width: 30%; }
+
+.contents_lcb .acc_manage .list_txt .tip_area .tip_pop .tip_con .txt { font-size: 2.25rem !important; }
+
+.contents_lcb .summary_panel .change_inp_area { line-height: 1; }
+
+.contents_lcb .summary_panel .change_inp_area .chg_inp .inp_text { height: 27px; vertical-align: top; line-height: 1.5; }
+
+.contents_lcb .summary_panel .change_inp_area .chg_inp .inp_text::-webkit-input-placeholder { }
+
+.contents_lcb .summary_panel .change_inp_area .chg_btn { margin-top: -16px; }
+
+.contents_lcb .summary_panel .change_inp_area .chg_btn button { font-size: 1.4rem; line-height: 1; }
+
+.contents_lcb .info_box.has_tit .info_tit.type_side { padding-right: 9rem; }
+
+.contents_lcb .info_box .info_tit .desc, .contents_lcb .info_box .info_tit .tit { font-size: 1.9rem; }
+
+.contents_lcb .check_info_wrap .chk_stit, .contents_lcb .check_info .chk_stit.info, .contents_lcb .check_info .chk_stit { font-size: 2.1rem; }
+
+.contents_lcb .agree_wrap .sub_chk_area .chk label { font-size: 2.1rem; }
+
+@media screen and (max-width: 320px) {
+  .contents_lcb .inp_area_cal .calendar .date { font-size: 1.6rem; }
+}
+
+.lcb_info .cnt_tit { margin: 10px 0px 30px; font-size: 3.3rem; line-height: 4.4rem; }
+
+.lcb_info .cnt_tit strong { font-size: 3.3rem; line-height: 4.4rem; font-weight: 900; }
+
+.list_box li a.btn_youtube { position: relative; padding-left: 52px; }
+
+.list_box li a.btn_youtube::before { content: ""; position: absolute; left: 0px; top: calc(50% - 20px); display: inline-block; width: 40px; height: 40px; background: url("/resource/img/mwp/mweb/ico_youtube.png") 0px 0px / 40px no-repeat; }
+
+.lcb_youtube_list li { margin: 0px 20px 40px; }
+
+.lcb_youtube_list li .thumb { position: relative; width: 100%; margin: 0px; padding-bottom: 56.25%; background: rgb(245, 245, 245); }
+
+.lcb_youtube_list li .tit { margin-top: 15px; font-size: 1.7rem; line-height: 2.3rem; color: rgb(33, 33, 33); font-weight: 500; }
+
+.lcb_youtube_list li .cnt { margin-top: 10px; padding-left: 16px; font-size: 1.3rem; line-height: 1.8rem; color: rgb(117, 117, 117); background: url("/resource/img/mwp/ico_bnktv_play.png") 0px 100% / 16px 16px no-repeat; }
+
+.lcb_youtube_list li > div > a { position: relative; display: block; }
+
+.lcb_youtube_list li > div > a::before { content: ""; position: absolute; left: calc(50% - 34px); top: calc(50% - 24px); display: inline-block; width: 68px; height: 48px; background-color: rgba(0, 0, 0, 0.7); border-radius: 10px; }
+
+.lcb_youtube_list li > div > a::after { content: ""; position: absolute; left: calc(50% - 9px); top: calc(50% - 10px); border-style: solid; border-width: 10px 0px 10px 18px; border-color: transparent transparent transparent rgb(255, 255, 255); }
+
+.btn_fxbtm.btn_bnktv { padding: 0px 40px 40px; }
+
+.btn_fxbtm.btn_bnktv .btn_area .btn_round_b { padding: 0px; border-radius: 34px; box-sizing: border-box; background: rgb(19, 19, 19); opacity: 0.9; font-size: 1.7rem; color: rgb(255, 255, 255); }
+
+.btn_fxbtm.btn_bnktv .btn_area .btn_round_b img { height: 16px; margin-top: -4px; vertical-align: middle; }
+
+.contents_lcb .sort_details .trans_sch { width: 100%; }
+
+.contents_lcb .sort_details .trans_sch .search::before { width: 17px; height: 17px; }
+
+.contents_lcb .sort_details .trans_sch .item { margin: -3px 0px; font-size: 1.9rem; }
+
+.contents_lcb .sort_details .trans_sch .item span { font-size: 1.9rem; }
+
+.contents_lcb .sort_details .trans_sch .item .btn_delete { width: 13px; height: 13px; }
+
+.contents_lcb .layer_all.layer_trans_ck .ly_tit, .contents_lcb .layer_all.layer_trans_ck .ly_tit * { font-size: 3.1rem; }
+
+.contents_lcb .layer_all.layer_trans_ck .lycnt .lybx { top: 180px; }
+
+.contents_lcb .info_detail .list_info.type_box .acc_name { font-size: 2.1rem; }
+
+.contents_lcb .info_detail .list_info.type_box .acc_balance .txt_unit { font-size: 2.25rem; }
+
+.contents_lcb .info_detail .list_info.type_box .acc_balance .txt_num { font-size: 2.6rem; }
+
+.contents_lcb .info_detail .list_info.type_box .acc_order { position: static; font-size: 1.9rem; }
+
+.contents_lcb .trans_info .acd_btn { font-size: 2.25rem; }
+
+.contents_lcb .ctg_twd .info_box.has_tit.type_tit_v2 .info .right { font-size: 2.25rem; }
+
+.contents_lcb .summary_panel .summ_list .tit.txt_pointLP { margin-top: -8px; }
+
+.contents_lcb .summary_panel .summ_list .tit.txt_pointLP::before { vertical-align: -5px; }
+
+.contents_lcb .fraud_edu_bnr { margin-top: 24px; border: 0px; overflow: hidden; }
+
+.contents_lcb .fraud_edu_bnr a { background: url("/resource/img/mwp//mweb/img_fraud_edu_btn.png") right bottom / auto 100% no-repeat rgb(211, 218, 223); margin: 0px; padding-left: 24px; border-bottom: 0px; font-weight: normal; }
+
+.contents_lcb .fraud_edu_bnr a::after { content: none; }
+
+.contents_lcb .fraud_edu_bnr a b { font-weight: 600; }
+
+.lcb_info.fraud_edu .cnt_tit { font-weight: normal; }
+
+.lcb_info .fraud_edu_cont { padding: 0px 20px; border-bottom: 10px solid rgb(245, 245, 245); margin-bottom: 46px; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_box { padding: 32px 28px; border: 1px solid rgb(232, 232, 232); border-radius: 8px; position: relative; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_box::after { display: block; content: ""; width: 96px; height: 96px; background: url("/resource/img/mwp//mweb/img_fraud_edu_siren.png") 0px 0px / 100% no-repeat; position: absolute; right: 0px; top: -81px; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_box .fraud_edu_box_tit { font-size: 1.9rem; color: rgb(0, 0, 0); margin-bottom: 24px; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_box .fraud_edu_box_tit strong { font-weight: bold; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_box ul li { font-size: 1.7rem; line-height: 2.3rem; color: rgb(33, 33, 33); position: relative; padding-left: 46px; font-weight: 600; text-decoration: underline 12px rgba(255, 211, 0, 0.16); text-underline-offset: -0.8rem; text-decoration-skip-ink: none; word-break: keep-all; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_box ul li + li { margin-top: 16px; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_box ul li::before { display: block; content: ""; width: 32px; height: 24px; background: url("/resource/img/mwp//mweb/ico_fraud_edu_warning.png") 0px 0px / 100% no-repeat; position: absolute; top: 2px; left: 0px; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_info { padding-top: 24px; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_info * { font-size: 1.5rem; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_info strong { font-weight: 600; color: rgb(33, 33, 33); }
+
+.lcb_info .fraud_edu_cont .fraud_edu_info h5 { font-weight: bold; color: rgb(33, 33, 33); font-size: 1.7rem; margin-top: 16px; margin-bottom: 4px; }
+
+.lcb_info .fraud_edu_cont .fraud_edu_info .btn_wrap { margin: 40px 0px; }
+
+.lcb_info.fraud_edu .lcb_youtube_list .cnt_tit2 { color: rgb(33, 33, 33); font-weight: bold; line-height: 40px; margin-left: 20px; margin-bottom: 16px; padding-left: 52px; background: url("/resource/img/mwp/mweb/ico_youtube.png") 0px 0px / 40px no-repeat; }
+
+.contents_lcb .btn_wrap.type_twd { bottom: calc(80px + env(safe-area-inset-bottom)); }
+
+.contents_lcb .btn_wrap.type_twd .btn_basic_round { min-width: 220px; padding: 15px 30px; font-size: 2.1rem; }
+
+.contents_lcb .acc_panel .txt-label02 { font-size: 2.1rem; }
+
+.contents_lcb .info_guideBox h3, .contents_lcb .info_guideBox h3 a { font-size: 2.1rem; line-height: 2rem; background-position: 0px 3px; }
+
+.contents_lcb .info_guideBox p, .contents_lcb .info_guideBox .list_bul li, .contents_lcb .info_guideBox .list_num li, .contents_lcb .info_guideBox .btn_txtlink { font-size: 2.1rem; line-height: 2.4rem; }
+
+.contents_lcb .list_bul li::before { top: 2px; }
+
+.contents_lcb .list_bul.type_dot > li::before { top: 12px; }
+
+.contents_lcb .txt-info, .contents_lcb .txt-infoB { line-height: 2.4rem; background-position: 0px 5px; }
+
+.contents_lcb .d_debit_area .box_wrap .btn_more { top: 19px; font-size: 1.9rem; background: url("/resource/img/mwp/ico-arrow-go-s.png") right 15px top 8px / 8px 15px no-repeat; }
+
+.contents_lcb .tab_con.type_full_top .banner .bn_txt, .contents_lcb .ly_translist .search_count, .contents_lcb .search_area .search_text .inp { font-size: 2.1rem; }
+
+.contents_lcb a.btn_basic_s, .contents_lcb button.btn_basic_s { font-size: 2.1rem; line-height: normal; }
+
+.contents_lcb .d_debit_area .flag_gd { font-size: 1.5rem; }
+
+.contents_lcb .d_debit_area .box_wrap .list_txt li .txt .btn_txtlink { vertical-align: top; }
+
+.contents_lcb .d_debit_area .box_wrap .list_txt li .txt .btn_txtlink::after { top: 6px; width: 8px; height: 15px; background: url("/resource/img/mwp/ico-arrow-go-s.png") center top / 8px 15px no-repeat; }
+
+.contents_lcb .list_insu .selected_area li { min-height: 80px; height: auto; }
+
+.contents_lcb .insu_tbl_box .tit_area .customer_ico { font-size: 1.8rem; }
+
+.contents_lcb .inp_wrap_group { display: block; }
+
+.contents_lcb .inp_wrap_group .inp_wrap:first-child { margin-top: 30px !important; margin-right: 0px; }
+
+.contents_lcb .panel_wrap.opn .ty_logo .tit { font-size: 1.6rem; }
+
+.contents_lcb .card_sort .name { font-size: 2.1rem; }
+
+.contents_lcb .card_sort .num { font-size: 1.8rem; }
+
+.contents_lcb .summary_panel .summ_select.type_line .select_box .tit { margin-bottom: 0px; font-size: 1.8rem; }
+
+.contents_lcb .summary_panel .summ_list .tit.ty2 span { font-size: 1.8rem; }
+
+.contents_lcb .info_box .info .right, .contents_lcb .info_box .info_tit + .info_detail > .list_txt > li .tit, .contents_lcb .info_box .info_tit + .info_detail > .list_txt > li .txt { font-size: 1.8rem; }
+
+.contents_lcb .ctg_atm .imn_list_area .imn_list .acc_panel .item_tag.type2, .ctg_rob .imn_list_area .imn_list .acc_panel .item_tag.type2 { bottom: -32px; }
+
+.contents_lcb .ctg_atm .box_wrap.type_bg .list_txt.type_right li .txt { text-align: left; }
+
+.contents_lcb .rbb_list_area .rbb_list .rbb_panel .select_box .label .acc_num { font-size: inherit; }
+
+.contents_lcb .list_txt.type_right li { flex-direction: column; }
+
+.contents_lcb .list_txt.type_right li .txt { max-width: 100%; width: 100%; }
+
+.contents_lcb .agree_wrap .user_guide .box_wrap2 .list_bul li, .contents_lcb .agree_wrap .user_guide .box_wrap2 .list_num li { font-size: 1.8rem; }
+
+.contents_lcb .graph_area.type02 > .balloon { width: 220px; margin-left: 0px; transform: translateX(-50%); }
+
+.contents_lcb .lst_question dt { font-size: 2.1rem; line-height: 2.4rem; }
+
+.contents_lcb .ctg_atm *, .contents_lcb .ctg_rob * { font-size: 2.1rem !important; line-height: 2.4rem !important; }
+
+.contents_lcb .ctg_atm .agree_wrap .list_agree li > .chk + .ico_link, .contents_lcb .ctg_rob .agree_wrap .list_agree li > .chk + .ico_link { font-size: 0px !important; }

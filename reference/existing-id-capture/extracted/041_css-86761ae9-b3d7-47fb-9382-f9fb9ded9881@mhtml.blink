@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.loading_wrap { position: fixed; inset: 0px; z-index: 1000; }
+
+.loading_area { position: fixed; top: 50%; left: 50%; width: 60px; height: 60px; border-radius: 50%; background-color: rgb(255, 255, 255); transform: translate(-50%, -50%); }
+
+.loading_area::before { content: ""; display: block; position: absolute; width: 60px; height: 60px; border: 1px solid rgb(229, 229, 229); border-radius: 50%; box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 7px; }
+
+.loading_area .loader { position: absolute; top: 0px; width: 60px; height: 60px; stroke-linecap: round; stroke-width: 10px; fill: none; }
+
+.loading_area .spinner { stroke: url("#gradient"); stroke-dashoffset: 0; stroke-dasharray: 0; transform-origin: center center; animation: 2s ease-in-out 0s infinite normal none running spinner; }
+
+.loading_area .loading_img { display: block; width: 60px; height: 60px; background: url("/resource/img/mwp/loading_img.png") 0px 0px / 60px 300px no-repeat; animation: 5s steps(5) 0s infinite normal none running loadimg; }
+
+@keyframes loadimg { 
+  0% { background-position-y: 0px; }
+  100% { background-position-y: -300px; }
+}
+
+@keyframes spinner { 
+  0% { stroke-dasharray: 0, 360; transform: rotate(-90deg); }
+  50% { stroke-dasharray: 360, 0; transform: rotate(-90deg); }
+  100% { stroke-dasharray: 0, 360; transform: rotate(630deg); }
+}

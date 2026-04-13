@@ -1,0 +1,22 @@
+node_modules
+dist
+coverage
+.vite
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+
+# Server upload artifacts (memory-only constraint at runtime; uploads dir not committed)
+server/uploads/
+
+# Playwright
+playwright-report/
+test-results/
+
+# OMC working state (generated)
+.omc/state/
+.omc/logs/
+.omc/notepad.md
+.omc/project-memory.json
