@@ -329,7 +329,7 @@ async function startSession(): Promise<void> {
 
   fsm.onTransition((ev) => {
     currentState = ev.to;
-    mapStateToHelp(ev.to);
+    mapStateToHelp(ev.to, fsm.getLastAlignReason());
   });
   fsm.onBlinkConfirmed((centerTs) => {
     void handleBlinkConfirmed(centerTs);
@@ -541,10 +541,14 @@ async function frameLoop(): Promise<void> {
   }
 }
 
-function mapStateToHelp(state: string): void {
+function mapStateToHelp(state: string, alignReason?: string): void {
   switch (state) {
     case "aligning":
-      showStatus("얼굴을 화면 안에 맞춰주세요");
+      if (alignReason === "face_too_small") {
+        showStatus("좀 더 가까이 와주세요");
+      } else {
+        showStatus("얼굴을 화면 안에 맞춰주세요");
+      }
       drawGuide("aligning");
       break;
     case "align_hold":

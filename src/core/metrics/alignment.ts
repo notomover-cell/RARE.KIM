@@ -13,15 +13,18 @@ export interface AlignmentGate {
 
 export interface AlignmentResult {
   aligned: boolean;
-  reason?: "no_landmarks" | "yaw" | "pitch" | "roll";
+  reason?: "no_landmarks" | "yaw" | "pitch" | "roll" | "face_too_small";
 }
 
 export function evaluateAlignment(
   metrics: FrameMetrics,
-  gate: AlignmentGate,
+  gate: AlignmentGate & { minFaceWidthRatio?: number },
 ): AlignmentResult {
   if (!metrics.landmarks || !metrics.headPose) {
     return { aligned: false, reason: "no_landmarks" };
+  }
+  if (gate.minFaceWidthRatio && metrics.faceBox && metrics.faceBox.w < gate.minFaceWidthRatio) {
+    return { aligned: false, reason: "face_too_small" };
   }
   const { yaw, pitch, roll } = metrics.headPose;
   if (Math.abs(yaw) > gate.yawMaxDeg) return { aligned: false, reason: "yaw" };

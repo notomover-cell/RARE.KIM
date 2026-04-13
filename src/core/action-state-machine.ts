@@ -79,7 +79,7 @@ const DEFAULT_CONFIG: ActionStateMachineConfig = {
   maxRetries: 3,
   maxBlinkRetriesBeforeFallback: 2,
   faceLostFrameThreshold: 2,
-  alignment: { yawMaxDeg: 12, pitchMaxDeg: 12, rollMaxDeg: 12 },
+  alignment: { yawMaxDeg: 12, pitchMaxDeg: 12, rollMaxDeg: 12, minFaceWidthRatio: 0.25 },
   earBlinkClosedMax: 0.18,
   earBlinkOpenMin: 0.24,
   earWindowMs: 600,
@@ -199,12 +199,20 @@ export class ActionStateMachine {
 
   // Alignment / blink transition handlers ------------------------------------
 
+  private lastAlignReason: string | undefined;
+
+  getLastAlignReason(): string | undefined {
+    return this.lastAlignReason;
+  }
+
   private handleAligning(metrics: FrameMetrics): void {
     const result = evaluateAlignment(metrics, this.cfg.alignment);
     if (!result.aligned) {
+      this.lastAlignReason = result.reason;
       this.updateFaceLostStreak(metrics);
       return;
     }
+    this.lastAlignReason = undefined;
     this.faceLostStreak = 0;
     this.alignHoldStartedAt = metrics.timestamp;
     this.transition("align_hold", "alignment_ok");

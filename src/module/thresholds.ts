@@ -40,6 +40,11 @@ export const YAW_MAX_DEG = 12;
 export const PITCH_MAX_DEG = 12;
 export const ROLL_MAX_DEG = 12;
 
+// Minimum face size (normalized ratio of frame). Face bbox width must be
+// at least this fraction of the frame width to proceed past alignment.
+// 0.25 = face must occupy at least 25% of the frame width.
+export const MIN_FACE_WIDTH_RATIO = 0.25;
+
 // Eye Aspect Ratio thresholds for blink detection.
 export const EAR_BLINK_CLOSED_MAX = 0.18;
 export const EAR_BLINK_OPEN_MIN = 0.24;
